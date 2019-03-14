@@ -22,7 +22,7 @@ const todos = [{
       });
 
  
-
+//POST
 describe('POST/todos', () => {
     it('should create a new todo', (done) => {
         var text = 'test todo text';
@@ -61,7 +61,7 @@ describe('POST/todos', () => {
     });
     });
 });
-
+//GET
 describe('GET /todos', () => {
     it('should get all todos', (done) => {
         request(app)
@@ -99,7 +99,7 @@ describe('GET /todos/:id', () => {
     });
     
 });
-
+//DELETE
 describe('DELETE /todos/:id', () => {
     it('should remove a todo', (done) => {
         var hexID = todos[1]._id.toHexString();
@@ -134,6 +134,7 @@ describe('DELETE /todos/:id', () => {
     });
 });
 
+//PATCH
 describe('PATCH /todos/:id', () => {
     it('should update the todo', (done) => {
         var hexID = todos[0]._id.toHexString();
